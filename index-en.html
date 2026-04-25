@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON APEX | Home</title>
+    <meta name="description" content="Meet NEON APEX, the high-performance electric sports car. Overwhelming speed and futuristic design.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <nav>
+        <a href="index-en.html" class="logo">NEON APEX</a>
+        <div class="nav-links">
+            <a href="index-en.html">Home</a>
+            <a href="#product">Product</a>
+            <a href="#story">Story</a>
+            <a href="#contact">Contact</a>
+            <div class="lang-switcher">
+                <a href="index.html" class="lang-link">KR</a>
+                <a href="index-en.html" class="lang-link active">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-video-container">
+            <img src="assets/hero.png" alt="Neon Apex Sports Car Hero">
+        </div>
+        <div class="hero-content">
+            <h1>SPEED OF LIGHT</h1>
+            <p>Overwhelming performance that goes beyond limits. Meet NEON APEX, the futuristic sports car that will awaken your senses.</p>
+            <a href="#product" class="cta-button">Learn More</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="product" class="features">
+            <div class="feature-card">
+                <i data-lucide="zap" class="feature-icon"></i>
+                <h3>Hyper Acceleration</h3>
+                <p>0-100km/h in just 1.9s. Experience the thrill with the instant torque of the electric motor.</p>
+            </div>
+            <div class="feature-card">
+                <i data-lucide="shield-check" class="feature-icon"></i>
+                <h3>Intelligent Safety</h3>
+                <p>360-degree LiDAR sensors and AI-based autonomous driving assistance protect you.</p>
+            </div>
+            <div class="feature-card">
+                <i data-lucide="wind" class="feature-icon"></i>
+                <h3>Aerodynamic Design</h3>
+                <p>A low drag coefficient of 0.19Cd maximizes energy efficiency and top speed.</p>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="info-image">
+                <img src="assets/engine.png" alt="Performance Motor">
+            </div>
+            <div class="info-text">
+                <h2>Next-Gen Powertrain</h2>
+                <p>The quad motor system controls each wheel independently. Experience perfect cornering and overwhelming grip.</p>
+                <p style="margin-top: 20px; color: var(--text-secondary);">
+                    The state-of-the-art thermal management system ensures consistent power output without performance degradation even on track days.
+                </p>
+            </div>
+        </section>
+
+        <section id="story" class="info-section">
+            <div class="info-text">
+                <h2>The Start of an Endless Journey</h2>
+                <p>NEON APEX is more than just a fast car. It is the result of engineering excellence meeting artistic sensibility.</p>
+                <p style="margin-top: 20px; color: var(--text-secondary);">
+                    We pursue value beyond speed. Experience pure freedom on the road and a new lifestyle brought by innovative technology.
+                </p>
+            </div>
+            <div class="info-image">
+                <img src="assets/story.png" alt="Driving Story">
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Get In Touch</h2>
+            <p>Have more questions about NEON APEX? Talk to our experts today.</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="cta-button" style="width: 100%; border: none; cursor: pointer;">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer style="padding: 100px 50px; text-align: center; background: #000; border-top: 1px solid var(--glass-border);">
+        <h2 style="margin-bottom: 30px;">Are You Ready to Wake Your Heart?</h2>
+        <a href="#" class="cta-button">Request Test Drive</a>
+        <div style="margin-top: 50px; color: var(--text-secondary); font-size: 0.8rem;">
+            &copy; 2026 NEON APEX Motors. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.feature-card, .info-section, .contact-section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(50px)';
+            el.style.transition = 'all 0.8s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

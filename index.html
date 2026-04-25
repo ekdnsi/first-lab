@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON APEX | 홈</title>
+    <meta name="description" content="고성능 전기 스포츠카 NEON APEX를 만나보세요. 압도적인 스피드와 미래지향적 디자인.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">NEON APEX</a>
+        <div class="nav-links">
+            <a href="index.html">홈페이지</a>
+            <a href="#product">제품</a>
+            <a href="#story">스토리</a>
+            <a href="#contact">문의</a>
+            <div class="lang-switcher">
+                <a href="index.html" class="lang-link active">KR</a>
+                <a href="index-en.html" class="lang-link">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-video-container">
+            <img src="assets/hero.png" alt="Neon Apex Sports Car Hero">
+        </div>
+        <div class="hero-content">
+            <h1>SPEED OF LIGHT</h1>
+            <p>한계를 넘어서는 압도적인 퍼포먼스. 당신의 감각을 깨울 미래형 스포츠카, NEON APEX.</p>
+            <a href="#product" class="cta-button">자세히 알아보기</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="product" class="features">
+            <div class="feature-card">
+                <i data-lucide="zap" class="feature-icon"></i>
+                <h3>초광속 가속</h3>
+                <p>0-100km/h 단 1.9초. 전기 모터의 즉각적인 토크로 전율을 선사합니다.</p>
+            </div>
+            <div class="feature-card">
+                <i data-lucide="shield-check" class="feature-icon"></i>
+                <h3>지능형 안전</h3>
+                <p>360도 LiDAR 센서와 AI 기반 자율 주행 보조 시스템이 당신을 보호합니다.</p>
+            </div>
+            <div class="feature-card">
+                <i data-lucide="wind" class="feature-icon"></i>
+                <h3>공기역학 디자인</h3>
+                <p>0.19Cd의 낮은 항력 계수로 에너지 효율과 최고 속도를 극대화했습니다.</p>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="info-image">
+                <img src="assets/engine.png" alt="Performance Motor">
+            </div>
+            <div class="info-text">
+                <h2>차세대 파워트레인</h2>
+                <p>쿼드 모터 시스템이 각 바퀴를 독립적으로 제어합니다. 완벽한 코너링과 압도적인 접지력을 경험하세요.</p>
+                <p style="margin-top: 20px; color: var(--text-secondary);">
+                    최첨단 열 관리 시스템으로 서킷 주행에서도 성능 저하 없는 일관된 출력을 보장합니다.
+                </p>
+            </div>
+        </section>
+
+        <section id="story" class="info-section">
+            <div class="info-text">
+                <h2>끝없는 여정의 시작</h2>
+                <p>NEON APEX는 단순히 빠른 차가 아닙니다. 엔지니어링의 정점과 예술적 감각이 만난 결과물입니다.</p>
+                <p style="margin-top: 20px; color: var(--text-secondary);">
+                    우리는 속도 그 이상의 가치를 추구합니다. 도로 위에서 느끼는 순수한 자유와 혁신적인 기술이 선사하는 새로운 라이프스타일을 만나보세요.
+                </p>
+            </div>
+            <div class="info-image">
+                <img src="assets/story.png" alt="Driving Story">
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>문의하기</h2>
+            <p>NEON APEX에 대해 더 궁금한 점이 있으신가요? 지금 바로 전문가와 상담하세요.</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" placeholder="성함을 입력해주세요">
+                </div>
+                <div class="form-group">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" placeholder="example@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">문의 내용</label>
+                    <textarea id="message" rows="5" placeholder="문의하실 내용을 입력해주세요"></textarea>
+                </div>
+                <button type="submit" class="cta-button" style="width: 100%; border: none; cursor: pointer;">메시지 보내기</button>
+            </form>
+        </section>
+    </main>
+
+    <footer style="padding: 100px 50px; text-align: center; background: #000; border-top: 1px solid var(--glass-border);">
+        <h2 style="margin-bottom: 30px;">당신의 심장을 뛰게 할 준비가 되셨습니까?</h2>
+        <a href="#" class="cta-button">시승 신청하기</a>
+        <div style="margin-top: 50px; color: var(--text-secondary); font-size: 0.8rem;">
+            &copy; 2026 NEON APEX Motors. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.feature-card, .info-section, .contact-section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(50px)';
+            el.style.transition = 'all 0.8s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
